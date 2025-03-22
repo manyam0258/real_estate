@@ -4,11 +4,11 @@
 import frappe
 import erpnext
 from frappe import _
-from erpnext.controllers.status_updater import StatusUpdaterERP
+from erpnext.controllers.status_updater import StatusUpdater
 from real_estate.real_estate.doctype.property_payment_plan_template.property_payment_plan_template import get_payment_plan
 from real_estate.real_estate.doctype.property_booking_order.property_booking_order import get_payment_schedule
 
-class PropertyUnit(StatusUpdaterERP):
+class PropertyUnit(StatusUpdater):
 	def validate(self):
 		self.set_address_display()
 		self.validate_block_project()
